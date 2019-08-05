@@ -10,8 +10,7 @@ import java.util.List;
 
 @Service
 public class CategoryService {
-    @Autowired
-    CategoryDAO categoryDAO;
+    @Autowired CategoryDAO categoryDAO;
     public List<Category> list(){
         Sort sort = new Sort(Sort.Direction.DESC,"id");
         return categoryDAO.findAll(sort);
